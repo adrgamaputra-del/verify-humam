@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Verify</title>
+
+<style>
+body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+background:#f2f2f2;
+overflow:hidden;
+}
+
+.box{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,0.1);
+}
+
+button{
+padding:12px 20px;
+font-size:16px;
+cursor:pointer;
+}
+
+#scare{
+display:none;
+position:fixed;
+inset:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:999;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>Verify you are human</h2>
+<button onclick="boom()">I'm not a robot</button>
+</div>
+
+<img id="scare"
+src="https://i.imgur.com/5Z0FQ9Q.jpeg">
+
+<audio id="sound"
+src="https://www.myinstants.com/media/sounds/movie_1.mp3"></audio>
+
+<script>
+function boom(){
+
+document.getElementById("scare").style.display="block";
+
+document.getElementById("sound").play();
+
+document.documentElement.requestFullscreen();
+
+}
+</script>
+
+</body>
+</html>
