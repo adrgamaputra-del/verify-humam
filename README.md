@@ -1,1 +1,1 @@
-# verify-humam
+# verify-human
